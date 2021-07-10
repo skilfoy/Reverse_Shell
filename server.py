@@ -17,7 +17,7 @@ def reliable_recv():
 
 def shell():
     while True:
-        command = raw_input("* Shell~#%s: " % str(ip))
+        command = raw_input("* Shell %s:~#" % str(ip))
         reliable_send(command)
         if command == "q":
             break
